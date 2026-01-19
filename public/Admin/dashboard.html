@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">Emergency<span>Hub</span></h2>
+
+        <ul class="menu">
+            <li class="active">Dashboard</li>
+            <li onclick="openPage('ambulance.html')">Ambulance</li>
+            <li onclick="openPage('hospital.html')">Hospital</li>
+            <li onclick="openPage('bloodbank.html')">Blood Bank</li>
+            <li onclick="openPage('personinformation.html')">Blood Donors</li>
+            <li onclick="openPage('doctor.html')">Doctors</li>
+            <li onclick="openPage('shelter.html')">Shelter</li>
+            <li onclick="openPage('fire.html')">Fire Service</li>
+            <li onclick="openPage('police.html')">Police</li>
+        </ul>
+
+        <button id="logout-btn">Logout</button>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+    <h3>Dashboard Overview</h3>
+
+    <div class="right-section">
+        <span class="admin-name">Admin</span>
+        <img src="images/admin-avatar.png" alt="Admin" class="header-logo">
+    </div>
+</header>
+
+
+        <!-- CONTENT -->
+        <section class="content">
+
+            <!-- STATS -->
+            <div class="stats">
+                <div class="card"><p>Ambulances</p><h2 id="ambulanceCount">0</h2></div>
+                <div class="card"><p>Hospitals</p><h2 id="hospitalCount">0</h2></div>
+                <div class="card"><p>Doctors</p><h2 id="doctorCount">0</h2></div>
+                <div class="card"><p>Blood Bank</p><h2 id="bloodCount">0</h2></div>
+                <div class="card"><p>Shelters</p><h2 id="shelterCount">0</h2></div>
+                <div class="card"><p>Police Stations</p><h2 id="policeCount">0</h2></div>
+                <div class="card"><p>Fire Services</p><h2 id="fireCount">0</h2></div>
+            </div>
+
+            <!-- RECENT -->
+            <div class="table-box">
+                <h4>Recent Updates</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Name</th>
+                            <th>Area</th>
+                            <th>Updated</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentTable">
+                        <tr><td colspan="4">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+</div>
+
+<script src="js/dashboard.js"></script>
+
+<script>
+function openPage(page) {
+    // admin login protection
+    if (sessionStorage.getItem("adminLoggedIn") !== "true") {
+        window.location.href = "admins.html";
+        return;
+    }
+    window.location.href = page;
+}
+</script>
+
+</body>
+</html>

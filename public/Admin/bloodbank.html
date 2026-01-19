@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Bank Management</title>
+    <link rel="stylesheet" href="css/crud.css">
+</head>
+<body>
+
+    <button class="home-btn" onclick="window.location.href='dashboard.html'">
+        Back to Dashboard
+    </button>
+
+<div class="container">
+
+    <h2>Blood Bank Management</h2>
+
+    <div class="form-box">
+        <input type="hidden" id="id">
+
+        <input id="name" placeholder="Blood Bank Name">
+        <input id="area" placeholder="Area">
+        <input id="contact" placeholder="Contact">
+        <input id="adress" placeholder="Address">
+
+        <button onclick="saveBloodBank()">Save</button>
+        <p id="msg"></p>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Area</th>
+                    <th>Contact</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="data"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="js/bloodbank.js"></script>
+</body>
+</html>

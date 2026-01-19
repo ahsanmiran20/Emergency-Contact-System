@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e8ecf0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;   /* logo left | menu right */
+    align-items: center;
+    padding: 15px 60px;
+    background-color: #dbcccc;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Only for about.html and contact.html: align menu to the left */
+.navbar.left-aligned {
+    justify-content: flex-start !important;
+    gap: 20px;
+}
+
+.navbar.left-aligned .nav-links {
+    margin-left: 20px;
+}
+
+
+/* Logo styling */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.logo img {
+  height: 34px;
+  width: auto;
+  border-radius: 6px;   /* smooth edges */
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e63946;
+}
+
+/* Hero Header */
+.hero {
+    background: linear-gradient(135deg, #e63946, #ff6b6b);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 30px;
+}
+
+.hero p {
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+/* Area Selection */
+.area-select {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.area-select label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.area-select select {
+    padding: 10px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    gap: 30px;
+    padding: 40px 20px;
+    justify-content: center;
+    align-items: start;
+}
+
+/* Cards */
+.card {
+    width: 100%;
+    max-width: 240px;
+    background-color: white;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Card Colors */
+.ambulance { border-top: 5px solid #ff595e; }
+.hospital  { border-top: 5px solid #1982c4; }
+.fire      { border-top: 5px solid #ff924c; }
+.police    { border-top: 5px solid #6a4c93; }
+.blood     { border-top: 5px solid #e63946; }
+.shelter   { border-top: 5px solid #1982c4; }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    color: #777;
+}
+/* Page Loader */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ddd;
+    border-top: 5px solid #e63946;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ================= Developers Section ================= */
+.developers {
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+
+.developer-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.developer-card {
+    text-align: center;
+}
+
+.dev-photo {
+    width: 150px;       /* set fixed width */
+    height: 150px;      /* set fixed height */
+    object-fit: cover;  /* ensures image covers area */
+    border-radius: 50%; /* circular images */
+    border: 2px solid #e63946;
+}
+
+.role {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ================= About Website Section ================= */
+.about-website .container {
+    max-width: 800px;       /* limits width so text looks neat */
+    margin: 50px auto;      /* centers horizontally and adds top/bottom spacing */
+    text-align: center;     /* centers the text */
+    padding: 0 20px;        /* small padding for mobile screens */
+}
+
+.about-website h1 {
+    font-size: 32px;
+    color: #e63946;
+    margin-bottom: 20px;
+}
+
+.about-website p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+
+/*==================================Area Select Box========================*/
+
+.area-select {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.area-select label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Glass + Gradient dropdown */
+.area-select select {
+  width: 280px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.6);
+  background: linear-gradient(145deg,#ffffff 0%, #f2f6ff 100%);
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.05),
+    inset 0 1px 3px rgba(255,255,255,0.7);
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  appearance: none;          /* hide default arrow */
+  cursor: pointer;
+  transition: 0.25s ease;
+  position: relative;
+}
+
+/* Custom arrow */
+.area-select select {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%235a6cff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
+}
+
+/* Hover */
+.area-select select:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+/* Focus (clicked) */
+.area-select select:focus {
+  border-color: #6a7dff;
+  box-shadow: 0 0 0 4px rgba(120,140,255,0.25);
+}
+
+
+
+

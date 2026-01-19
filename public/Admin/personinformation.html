@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Donor Management</title>
+    <link rel="stylesheet" href="css/crud.css">
+</head>
+<body>
+
+    <button class="home-btn" onclick="window.location.href='dashboard.html'">
+       Back to Dashboard
+    </button>
+    
+<div class="container">
+
+    <h2>Blood Donor Management</h2>
+
+    <div class="form-box">
+        <input type="hidden" id="id">
+
+        <input id="name" placeholder="Donor Name">
+        <input id="blood_group" placeholder="Blood Group (A+, O-, etc)">
+        <input id="contact" placeholder="Contact">
+        <input id="email" placeholder="Email">
+        <input id="ababilty" placeholder="Availability (Yes/No)">
+        
+        <input id="area" placeholder="Area">
+
+        <button onclick="saveDonor()">Save</button>
+        <p id="msg"></p>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Blood Group</th>
+                    <th>Area</th>
+                    <th>Contact</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="data"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="js/personinformation.js"></script>
+</body>
+</html>

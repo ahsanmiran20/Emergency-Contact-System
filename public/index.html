@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency Contact System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/logo.png" alt="EmergencyHelp Logo">
+    <span>EmergencyHelp</span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html" class="home-btn">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="Admin/admins.html">Admin</a></li>
+  </ul>
+</nav>
+
+
+<!-- Header -->
+<header class="hero">
+    <h1>Emergency Contact System</h1>
+    <p>Quick help when you need it</p>
+</header>
+
+<!-- Area Selection -->
+<section class="area-select">
+    <label>Select Your Area</label>
+    <select id="area">
+        <option value="">Select Area</option>
+        <option value="Bahadarhat">Bahadarhat</option>
+            <option value="Nasirabad">Nasirabad</option>
+            <option value="GEC Circle">GEC Circle</option>
+            <option value="Agrabad">Agrabad</option>
+            <option value="Shitakundu">Shitakundu</option>
+            <option value="Patenga">Patenga</option>
+            <option value="Kumira">Kumira</option>
+            <option value="Gulshan">Gulshan</option>
+            <option value="Panchlaish">Panchlaish</option>
+            <option value="Halishahar">Halishahar</option>
+            <option value="Chandgaon">Chandgaon</option>
+            <option value="Kotwali">Kotwali</option>
+            <option value="Double Mooring">Double Mooring</option>
+            <option value="Pahartali">Pahartali</option>
+            <option value="Raozan">Raozan</option>
+            <option value="Fatikchhari">Fatikchhari</option>
+            <option value="Oxygen" > Oxygen</option>
+            <option value="Muradpur">Muradpur</option>
+            <option value="Baluchara">Baluchara</option>
+            <option value="Bayazid">Bayazid</option>
+            <option value="Jalalabad">Jalalabad</option>
+            <option value="Sadarghat">Sadarghat</option>
+            <option value="Wazedia">Wazedia</option>
+            <option value="Lalkhan Bazar">Lalkhan Bazar</option>
+            <option value="Bakalia">Bakalia</option>
+            <option value="Chawk Bazar">Chawk Bazar</option>
+            <option value="Sahid Minar">Sahid Minar</option>
+            <option value="Khatunganj">Khatunganj</option>
+            <option value="Jhautola">Jhautola</option>
+            <option value="Sakthakundu">Sakthakundu</option>
+            <option value="Moddho Para">Moddho Para</option>
+            <option value="Kalurghat">Kalurghat</option>
+            <option value="Fouzdarhat">Fouzdarhat</option>
+    </select>
+</section>
+
+<!-- Emergency Services -->
+<section class="services">
+    <div class="card ambulance" onclick="goToPage('Ambulance/ambulance.html')">
+        <h2>🚑 Ambulance</h2>
+        <p>Quick medical help</p>
+    </div>
+
+    <div class="card hospital" onclick="goToPage('Hospital/hospital.html')">
+        <h2>🏥 Hospital</h2>
+        <p>Nearby hospitals</p>
+    </div>
+
+    <div class="card fire" onclick="goPage()">
+        <h2>🚒 Fire Service</h2>
+        <p>Fire emergencies</p>
+    </div>
+
+    <div class="card police" onclick="gopage()">
+        <h2>🚓 Police</h2>
+        <p>Security help</p>
+    </div>
+
+    <div class="card blood" onclick="goToPage('Bloodbank/bloodbank.html')">
+        <h2>🩸 Blood Bank</h2>
+        <p>Emergency Blood</p>
+    </div>
+
+    <div class="card shelter" onclick="goToPage('Shelter/shelter.html')">
+        <h2>🏠 Shelter</h2>
+        <p>Emergency Place</p>
+    </div>
+</section>
+
+<footer>
+    <p>Emergency numbers are area based</p>
+</footer>
+
+<script>
+    function goToPage(page){
+        const area = document.getElementById('area').value;
+        if(!area){
+            alert('Please select an area first');
+            return;
+        }
+        window.location.href = `${page}?area=${encodeURIComponent(area)}`;
+    }
+
+    function gopage(){
+        window.location.href = "Police/police.html";
+    }
+
+    function goPage(){
+        window.location.href = "Fire/fire.html";
+    }
+</script>
+
+<script>
+    window.addEventListener("load", () => {
+        document.getElementById("loader").style.display = "none";
+    });
+</script>
+
+
+</body>
+</html>

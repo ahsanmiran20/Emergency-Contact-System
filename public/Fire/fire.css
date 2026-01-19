@@ -1,0 +1,136 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fff1f1, #ffe5e5);
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #e63946, #ff7b00);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.form-container {
+    max-width: 420px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+select, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+button {
+    background: linear-gradient(135deg, #e63946, #ff7b00);
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    width: 90%;
+    max-width: 480px;
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-left: 6px solid #ff7b00;
+}
+
+.card h3 {
+    color: #e63946;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #555;
+    font-size: 15px;
+}
+/* ===== Hotline Moving Text ===== */
+/* ===== Hotline Continuous Animation (No Gap, No Stop) ===== */
+.hotline-marquee {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 12px;
+    position: relative;
+}
+
+.hotline-track {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff7cc;
+
+    /* Start off-screen left */
+    transform: translateX(-100%);
+    animation: fireMarquee 5s linear infinite;
+}
+
+/* Continuous loop */
+@keyframes fireMarquee {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+ 
+/* ================= Navbar Links ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e63946;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e63946;
+}

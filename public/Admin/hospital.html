@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Management</title>
+    <link rel="stylesheet" href="css/crud.css">
+</head>
+<body>
+
+    <button class="home-btn" onclick="window.location.href='dashboard.html'">
+       Back to Dashboard
+    </button>
+
+<div class="container">
+<h2>Hospital Management</h2>
+
+<div class="form-box">
+<input id="hospital_name" placeholder="Hospital Name">
+<input id="area" placeholder="Area">
+<input id="contact" placeholder="Contact">
+<input id="address" placeholder="Address">
+<button onclick="saveHospital()">Save</button>
+<p id="msg"></p>
+</div>
+
+<table>
+<thead><tr><th>Name</th><th>Area</th><th>Contact</th><th>Action</th></tr></thead>
+<tbody id="data"></tbody>
+</table>
+</div>
+
+<script src="js/hospital.js"></script>
+
+</body>
+</html>

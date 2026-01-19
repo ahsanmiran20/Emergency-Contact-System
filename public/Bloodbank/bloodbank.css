@@ -1,0 +1,225 @@
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f6f8, #eef2f5);
+    min-height: 100vh;
+    padding: 0;
+    color: #333;
+}
+
+/* ===== Header ===== */
+
+
+
+/* ===== Header ===== */
+
+/* ===== Header ===== */
+header {
+    
+    position: relative;
+    background: linear-gradient(135deg, #e63946, #d62828);
+    color: #fff;
+    padding: 30px 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Center title */
+header h1 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+}
+
+/* ===== Three-dot menu ===== */
+.menu-container {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.menu-btn {
+    font-size: 26px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Dropdown menu */
+.menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    background: #fff;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 14px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+.menu a:hover {
+    background-color: #f4f4f4;
+}
+
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+}
+
+
+
+/* ===== Section Titles ===== */
+section h2 {
+    text-align: center;
+    margin: 25px 0 20px;
+    color: #e63946;
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* ===== Containers ===== */
+#bloodbanks,
+#donors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== Cards ===== */
+.card {
+    background: linear-gradient(145deg, #ffffff, #fefefe);
+    padding: 20px 25px;
+    margin-bottom: 18px;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 38px rgba(0,0,0,0.18);
+}
+
+/* ===== Card Content ===== */
+.card h3 {
+    color: #d62828;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card p {
+    margin: 6px 0;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* ===== Messages ===== */
+#bloodbanks p,
+#donors p {
+    text-align: center;
+    font-size: 16px;
+    color: #0f0f0f;
+    margin-top: 15px;
+}
+
+/* ===== Donor Section Spacing ===== */
+#donors {
+    margin-top: 30px;
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+        
+    }
+
+    section h2 {
+        font-size: 20px;
+       
+    }
+
+    .card {
+        padding: 18px 20px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+}
+
+/* ===== Optional: Differentiate Bloodbanks & Donors ===== */
+#bloodbanks .card {
+    border-left: 5px solid #e63946;
+}
+
+#donors .card {
+    border-left: 5px solid #457b9d;
+}
+
+
+/* ================= Navbar Links ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e63946;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e63946;
+}

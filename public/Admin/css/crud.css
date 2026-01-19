@@ -1,0 +1,305 @@
+
+
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6f8;
+}
+
+.container {
+    width: 85%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #154799;
+    text-align: center;
+    font-size: 28px;
+}
+
+h3{
+     margin-bottom: 15px;
+     text-align: center;
+     color:#da1919;
+     font-size: 25px;
+}
+    
+/* Base reset */
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Form grid */
+.form-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+}
+
+/* Inputs */
+.form-box input {
+  grid-column: span 2;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  color: #111827;
+  background: #f9fafb;
+  transition: all 0.25s ease;
+}
+
+/* Focus state */
+.form-box input:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* Placeholder style */
+.form-box input::placeholder {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+/* Hover */
+.form-box input:hover {
+  border-color: #9ca3af;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .form-box input:nth-child(1),
+  .form-box input:nth-child(2) {
+    grid-column: span 1;
+  }
+}
+
+/* Smooth animation */
+.form-box input {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-box button {
+    grid-column: span 4px;
+    padding: 10px;
+    background: #2b4f9e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#msg {
+    grid-column: span 4;
+    color: green;
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.edit {
+    background: #facc15;
+    border: none;
+    padding: 5px 8px;
+}
+
+.delete {
+    background: #ef4444;
+    border: none;
+    padding: 5px 8px;
+    color: white;
+}
+
+
+
+
+
+
+.edit, .delete {
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.edit:hover {
+        transform: translate3d(1px,5px, 5px);
+
+    background: #eab308;
+}
+
+.delete:hover {
+    transform: translate3d(1px,5px, 5px);
+    background: #dc2626;
+    
+}
+
+
+.table-wrapper {
+    max-height: 500px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+thead {
+    position: sticky;
+    top: 0;
+    background: #aabbcc;
+    z-index: 10;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    font-weight: 700;
+    color: #154799;
+}
+
+tr:hover {
+    background: #e7e8eb;
+}
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(230,57,70,0.2);
+}
+
+/* Back to Dashboard Button */
+.home-btn {
+    background: #2563eb;        
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    float: right;               /* right side align */
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    background: #1d4ed8;        /* darker blue on hover */
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   TOPBAR SECTION - Header alignment styles
+   ========================================== */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;
+    padding: 15px 30px;
+}
+
+/* Dashboard Overview heading - slightly moved down */
+.topbar h3 {
+    margin: 0;
+    margin-top: 8px;  /* Move heading down for better alignment */
+    color: #da1919;
+    font-size: 25px;
+    text-align: left;  /* Override center alignment from h3 global style */
+}
+
+/* ==========================================
+   RIGHT SECTION - Admin name and avatar
+   ========================================== */
+
+.right-section {
+    display: flex;
+    flex-direction: column;  /* Stack admin name above avatar */
+    align-items: center;     /* Center align items */
+    gap: 6px;                /* Small gap between name and avatar */
+    margin-top: -25px;       /* Move entire section up */
+}
+
+/* Admin name text styling */
+.admin-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+/* Admin avatar/logo image */
+.header-logo {
+    height: 45px;           
+    width: auto;            
+    object-fit: contain;    
+    display: block;
+    border-radius: 50%;     /* Make avatar circular */
+    border: 2px solid #2563eb;  /* Optional: add border */
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN - Mobile adjustments
+   ========================================== */
+
+@media (max-width: 768px) {
+    .header-logo {
+        height: 36px;
+    }
+    
+    .admin-name {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fire Service Finder</title>
+    <link rel="stylesheet" href="fire.css">
+</head>
+<body>
+
+<!-- Navbar: Appears on all service pages -->
+<nav class="navbar">
+    <div class="logo">🚨 EmergencyHelp</div>
+    <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+
+<header>
+    <h1>🔥 Fire Service Information</h1>
+
+    <div class="hotline-marquee">
+        <div class="hotline-track">
+            🚨 Emergency Hotline: 102 — Direct hotline for the Fire Service
+        </div>
+    </div>
+</header>
+
+
+<div class="form-container">
+   <select id="district" onchange="loadAreas()">
+    <option value="">Select District</option>
+</select>
+
+<select id="area" disabled>
+    <option value="">Select Area</option>
+</select>
+
+
+
+    <button onclick="searchFire()">OK</button>
+</div>
+
+<section id="results"></section>
+
+<script src="fire.js"></script>
+</body>
+</html>

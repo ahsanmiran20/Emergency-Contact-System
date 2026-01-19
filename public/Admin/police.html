@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Police Management</title>
+    <link rel="stylesheet" href="css/crud.css">
+</head>
+<body>
+
+<button class="home-btn" onclick="window.location.href='dashboard.html'">
+       Back to Dashboard
+    </button>
+    
+<div class="container">
+
+    <h2>Police Station Management</h2>
+    <h3>Add New Police Station</h3>
+
+    <div class="form-box">
+        <input id="station_name" placeholder="Station Name">
+        <input id="district" placeholder="District">
+        <input id="city" placeholder="City">
+        <input id="area" placeholder="Area">
+        <input id="contact" placeholder="Contact (PK)">
+        <input id="address" placeholder="Address">
+        <input id="incharge_name" placeholder="Incharge Name">
+
+        <button onclick="savePolice()">Save</button>
+        <p id="msg"></p>
+    </div>
+
+    <!-- 🔥 ADD THIS WRAPPER -->
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Station</th>
+                    <th>Area</th>
+                    <th>Contact</th>
+                    <th>Incharge</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="data"></tbody>
+        </table>
+    </div>
+
+</div>
+
+
+<script src="js/police.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ambulance Management</title>
+    <link rel="stylesheet" href="css/crud.css">
+</head>
+<body>
+
+    <button class="home-btn" onclick="window.location.href='dashboard.html'">
+    Back to Dashboard
+</button>
+
+<div class="container">
+    <h2>Ambulance Management</h2>
+
+    <div class="form-box">
+        <!-- PK -->
+        <input type="text" id="ambulance_name" placeholder="Ambulance Name (Unique)" required>
+
+        <input type="text" id="driver_name" placeholder="Driver Name" required>
+        <input type="text" id="contact" placeholder="Contact"required>
+        <input type="text" id="numberplate" placeholder="Number Plate" required>
+
+        <input type="text" id="hospital_linked" placeholder="Hospital Linked"required>
+        
+        <div class="form-group">
+            <label>Ambulance Type</label>
+            <select required>
+                <option value="">Select ambulance type</option>
+                <option>Basic Life Support (BLS)</option>
+                <option>Advanced Life Support (ALS)</option>
+                <option>Critical Care Transport (CCT)</option>
+                <option>Type I</option>
+                <option>Type II</option>
+                <option>Type III</option>
+                <option>Dead Body Ambulance</option>
+                <option>Delivery Patient</option>
+            </select>
+
+        </div>
+        <input type="text" id="ababilty" placeholder="Availability"required>
+        <input type="text" id="area" placeholder="Area"required>
+
+        <button onclick="saveAmbulance()">Save Ambulance</button>
+        <p id="msg"></p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Driver</th>
+                <th>Contact</th>
+                <th>Area</th>
+                <th>Hospital</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="ambulanceTable"></tbody>
+    </table>
+</div>
+
+<script src="js/ambulance.js"></script>
+</body>
+</html>

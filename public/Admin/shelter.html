@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Management</title>
+    <link rel="stylesheet" href="css/crud.css">
+</head>
+<body>
+
+    <button class="home-btn" onclick="window.location.href='dashboard.html'">
+       Back to Dashboard
+    </button>
+    
+<div class="container">
+<h2>Shelter Management</h2>
+
+<div class="form-box">
+<input id="shelter_name" placeholder="Shelter Name">
+<input id="Location" placeholder="Location">
+<input id="area" placeholder="Area">
+
+<button onclick="saveShelter()">Save Shelter</button>
+<p id="msg"></p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Area</th>
+<th>Location</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody id="data"></tbody>
+</table>
+</div>
+
+<script src="js/shelter.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Police Station Finder</title>
+    <link rel="stylesheet" href="police.css">
+</head>
+<body>
+
+<!-- Navbar: Appears on all service pages -->
+<nav class="navbar">
+    <div class="logo">🚨 EmergencyHelp</div>
+    <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+
+<header>
+    <h1>🚓 Police Station Information</h1>
+</header>
+
+<div class="form-container">
+    <select id="district" onchange="loadCities()">
+        <option value="">Select District</option>
+    </select>
+
+    <select id="city" onchange="loadAreas()" disabled>
+        <option value="">Select City</option>
+    </select>
+
+    <select id="area" disabled>
+        <option value="">Select Area</option>
+    </select>
+
+    <button onclick="searchPolice()">OK</button>
+</div>
+
+<section id="results"></section>
+
+<script src="police.js"></script>
+</body>
+</html>

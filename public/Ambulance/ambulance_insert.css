@@ -1,0 +1,101 @@
+header {
+    text-align: center;
+    
+    background:linear-gradient(135deg, #e63946, #d62828);
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-radius: 15px;
+}
+header h1 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+   
+}
+
+/* ===== Insert Page Form ===== */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px ;
+}
+
+.modern-form {
+    background: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    animation: fadeUp 0.5s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #e63946;
+    box-shadow: 0 0 0 3px rgba(230,57,70,0.2);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #39afe6, #2b28d6);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .modern-form {
+        padding: 24px 20px;
+    }
+}

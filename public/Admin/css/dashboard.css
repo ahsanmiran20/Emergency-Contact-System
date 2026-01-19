@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+}
+
+/* Layout */
+.admin-layout {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background: #1f2937;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    padding: 14px 20px;
+    color: #cbd5e1;
+    cursor: pointer;
+}
+
+.menu li:hover,
+.menu .active {
+    background: #374151;
+    color: #fff;
+}
+
+#logout-btn {
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    background: #ef4444;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Main */
+.main {
+    flex: 1;
+}
+
+/* Topbar */
+.topbar {
+    background: #fff;
+    padding: 15px 25px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Content */
+.content {
+    padding: 25px;
+}
+
+/* Stats */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card p {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.card h2 {
+    margin-top: 10px;
+    font-size: 26px;
+}
+
+/* Table */
+.table-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fire Service Management</title>
+    <link rel="stylesheet" href="css/crud.css">
+</head>
+<body>
+
+    <button class="home-btn" onclick="window.location.href='dashboard.html'">
+       Back to Dashboard
+    </button>
+    
+<div class="container">
+
+    <h2>Fire Service Management</h2>
+
+    <!-- FORM -->
+    <div class="form-box">
+        <input id="station_name" placeholder="Station Name (PK)">
+        <input id="district" placeholder="District">
+        <input id="city" placeholder="City">
+        <input id="area" placeholder="Area">
+        <input id="contact" placeholder="Contact">
+        <input id="address" placeholder="Address">
+        <input id="incharge_name" placeholder="Incharge Name">
+
+        <button onclick="saveFire()">Save</button>
+        <p id="msg"></p>
+    </div>
+
+    <!-- 🔥 TABLE WITH SCROLL -->
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Station</th>
+                    <th>Area</th>
+                    <th>Contact</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="data"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="js/fire.js"></script>
+</body>
+</html>

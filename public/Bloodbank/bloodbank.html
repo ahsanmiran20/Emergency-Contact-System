@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Bank Finder</title>
+    <link rel="stylesheet" href="bloodbank.css">
+</head>
+<body>
+
+<!-- Navbar: Appears on all service pages -->
+<nav class="navbar">
+    <div class="logo">🚨 EmergencyHelp</div>
+    <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+
+    <header class="header">
+    <h1>Blood Bank Information</h1>
+
+    <!-- Three dot menu -->
+    <div class="menu-container">
+        <div class="menu-btn" onclick="toggleMenu()">&#8942;</div>
+
+        <div id="menu" class="menu">
+            <a href="bloobbank_insert.html">Insert Information</a>
+        </div>
+    </div>
+</header>
+    
+
+    <!-- Blood Bank Section -->
+    <section id="bloodbanks"></section>
+
+    <!-- Donor Section -->
+    <section id="donors"></section>
+
+    <!-- JS -->
+    <script src="bloodbank.js"></script>
+
+</body>
+</html>

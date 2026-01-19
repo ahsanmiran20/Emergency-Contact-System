@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert Ambulance Information</title>
+    <link rel="stylesheet" href="ambulance_insert.css">
+</head>
+
+<body>
+<header>
+    <h1>Insert Ambulance Information</h1>
+</header>
+
+<div class="form-wrapper">
+
+    <form id = "ambform" class ="modern-form">
+        <div class= "form-group">
+            <label>Ambulance name</label>
+            <input type="text" placeholder="Enter ambulance service name" required>
+            
+        </div>
+
+        <div class="form-group">
+            <label>Ambulance Type</label>
+            <select required>
+                <option value="">Select ambulance type</option>
+                <option>Basic Life Support (BLS)</option>
+                <option>Advanced Life Support (ALS)</option>
+                <option>Critical Care Transport (CCT)</option>
+                <option>Type I</option>
+                <option>Type II</option>
+                <option>Type III</option>
+                <option>Dead Body Ambulance</option>
+                <option>Delivery Patient</option>
+            </select>
+
+        </div>
+
+        <div class="form-group">
+            <label>Number Plate</label>
+            <input type="text" placeholder="XX-XXXX" required>
+        </div>
+
+        <div class="form-group">
+            <label>Hospital Name</label>
+            <input type="text" placeholder="Enter hospital name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Contact Number</label>
+            <input type="text" placeholder="01XXXXXXXXX" required>
+        </div>
+
+        <div class="form-group">
+            <label>Driver Name</label>
+            <input type="text" placeholder="Enter driver name" required>
+        </div>
+        <div class="form-group">
+            <label>Area</label>
+            <input type="text" placeholder="Enter area name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Availability</label>
+            <select required>
+                <option value="">Select availability</option>
+                <option>available</option>
+                <option>busy</option>
+            </select>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Information</button>
+    </form>
+</div>
+
+<script src="ambulance_insert.js"></script>
+</body>
+
+</html>
